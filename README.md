@@ -8,11 +8,18 @@ cd osumpi.github.io
 flutter pub get
 flutter build web --web-renderer html
 mv build/web ../temp/
+git add .
+git commit -m "gc"
+git push
 git checkout live
 cd ../temp/
-mv|cp . ../osumpi.github.io/
+cp . ../osumpi.github.io/
 cd ../osumpi.github.io/
+rm -r .dart_tool/
+rm -r build/
+rm -r temp/
 git add .
-git commit -m "Deploy ${timestamp}"
+git commit -m "Deploy"
+git push
 git checkout main
 ```
