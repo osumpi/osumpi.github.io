@@ -3,23 +3,17 @@
 ## Deploy
 
 ```sh
-git clone https://github.com/osumpi/osumpi.github.io.git
+git clone git@github.com:osumpi/osumpi.github.io.git
 cd osumpi.github.io
-flutter pub get
-flutter build web --web-renderer html
+flutter pub get && flutter build web --web-renderer html
 mv build/web ../temp/
-git add .
-git commit -m "gc"
-git push
+git clean -df
 git checkout live
-cd ../temp/
-cp . ../osumpi.github.io/
-cd ../osumpi.github.io/
-rm -r .dart_tool/
-rm -r build/
-rm -r temp/
+cp -a ../temp/. .
+rm -rf ../temp
+rm -rf .dart_tool
 git add .
-git commit -m "Deploy"
+git commit -m "Deploy on $(date)"
 git push
 git checkout main
 ```
