@@ -1,0 +1,1 @@
+ /media/rithviknishad/dev/osumpi.github.io/.dart_tool/flutter_gen/gen_l10n/app_localizations_en.dart /media/rithviknishad/dev/osumpi.github.io/.dart_tool/flutter_gen/gen_l10n/app_localizations.dart:  /media/rithviknishad/dev/osumpi.github.io/l10n.yaml /media/rithviknishad/dev/osumpi.github.io/lib/src/localization/app_en.arb
